@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
+            <div class="card col-md-3">
+
+                <img src="{{item.Poster}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{item.Title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">
+                    {{item.Plot}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Save
+                    <span class="fas fa-save"></span>
+
+                </button>
+
+
+            </div>
+        </ng-container>
+
+    </div>
+</div>
